@@ -1,0 +1,100 @@
+<!-- Character recognition to text -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Image Recognition</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        font-family: -apple-system, "Helvetica Neue", sans-serif;
+        font-weight:normal;
+        font-size: 20px;
+        background: url("../static/voice/interface.jpg");
+        background-size:  100% 100%;
+        background-repeat: no-repeat;
+        background-position:top center;
+        background-attachment: fixed;
+        text-align:center;
+      }
+      h3 {
+        color: white;
+        line-height: 30px;
+        font-size: 35px;
+      }
+      p {
+        color: white;
+        line-height:20px;
+        letter-spacing:.7px;
+      }
+      .button {
+      background-color: #FFFFFF;
+      border: none;
+      color: black;
+      padding: 4px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 4px 2px;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <!--<a class="mic" value="website" ><img src="../static/website.jpg" width=80px height=90px></a><a class="mic" value><img src="../static/Notes.jpg" width=80px height=90px></a>
+        <a class="mic" value="address"><img src="../static/address.jpg" width=80px height=90px></a><a class="mic" value=""><img src="../static/contacts.jpg" width=80px height=90px></a>-->
+        <p>Upload a picture and our software to detect the language.</p>
+        <br>
+        <form action="/pic" method="POST" enctype="multipart/form-data">
+          <div>
+            <p style="padding-left:25%;"><input type="file" name='image' accept="image/*" capture="camera" /></p>
+          </div>
+          <br>
+          <p>What shall we translate this photo to: </p>
+          <p><div>
+            <select name="target" style="width:95%;">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fil">Filipino</option>
+              <option value="fr">French</option>
+            </select>
+            <br>
+            <p style="font-size:15px;">*Please ensure that the target language will not be the detected language as it will cause a bad request*</p>
+          </div></p>
+          <br>
+         <button type="submit">Translate</button>
+         </form></div> <!-- /container -->
+         <br>
+        <textarea rows="10" cols="32" style="font-size:15pt;resize: none;" placeholder="Translated text here :)">{{text}}</textarea>
+
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

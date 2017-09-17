@@ -1,0 +1,151 @@
+<!-- Nearby Places  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Find Nearby</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      body {
+        font-family: -apple-system, "Helvetica Neue", sans-serif;
+        font-weight:normal;
+        font-size: 20px;
+        color: white;
+        background: url("../static/voice/interface.jpg");
+        background-size:  100% 100%;
+        background-repeat: no-repeat;
+        background-position:top center;
+        background-attachment: fixed;
+        text-align:center;
+      }
+      h3 {
+        color: white;
+        line-height: 30px;
+        font-size: 35px;
+      }
+      p {
+        text-align:left;
+        line-height:20px;
+        letter-spacing:.7px;
+        
+      }
+      .button {
+      background-color: #FFFFFF;
+      border: none;
+      color: black;
+      padding: 4px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 4px 2px;
+      }
+      .results {
+        height: 450px;
+        overflow: auto;
+        padding: 20px 30px;
+        margin: auto;
+        margin-top: 5%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <!--<a class="mic" value="website" ><img src="../static/website.jpg" width=80px height=90px></a><a class="mic" value><img src="../static/Notes.jpg" width=80px height=90px></a>
+        <a class="mic" value="address"><img src="../static/address.jpg" width=80px height=90px></a><a class="mic" value=""><img src="../static/contacts.jpg" width=80px height=90px></a>-->
+        What are you looking for and where?
+        <form action="/places" method="POST">
+          <p style=font-size:15px;color:gray;text-align:center;>
+          <input type = "text"
+                 name = "query_search"
+                 placeholder = "Try to be specific :)"
+                 style = "width:350px">
+        </p>
+        </form>
+        <div class="results">
+          <p>{{params.0.name}} {{params.0.rating}}</p>
+          <p>{{params.0.number}}</p>
+          <p>{{params.0.address}}</p>
+          <p>{{params.0.website}}</p>
+          <br>
+          <p>{{params.1.name}} {{params.1.rating}}</p>
+          <p>{{params.1.number}}</p>
+          <p>{{params.1.address}}</p>
+          <p>{{params.1.website}}</p>
+          <br>
+          <p>{{params.2.name}} {{params.2.rating}}</p>
+          <p>{{params.2.number}}</p>
+          <p>{{params.2.address}}</p>
+          <p>{{params.2.website}}</p>
+          <br>
+          <p>{{params.3.name}} {{params.3.rating}}</p>
+          <p>{{params.3.number}}</p>
+          <p>{{params.3.address}}</p>
+          <p>{{params.3.website}}</p>
+          <br>
+          <p>{{params.4.name}} {{params.4.rating}}</p>
+          <p>{{params.4.number}}</p>
+          <p>{{params.4.address}}</p>
+          <p>{{params.4.website}}</p>
+          <br>
+          <p>{{params.5.name}} {{params.5.rating}}</p>
+          <p>{{params.5.number}}</p>
+          <p>{{params.5.address}}</p>
+          <p>{{params.5.website}}</p>
+          <br>
+          <p>{{params.6.name}} {{params.6.rating}}</p>
+          <p>{{params.6.number}}</p>
+          <p>{{params.6.address}}</p>
+          <p>{{params.6.website}}</p>
+          <br>
+          <p>{{params.7.name}} {{params.7.rating}}</p>
+          <p>{{params.7.number}}</p>
+          <p>{{params.7.address}}</p>
+          <p>{{params.7.website}}</p>
+          <br>
+          <p>{{params.8.name}} {{params.8.rating}}</p>
+          <p>{{params.8.number}}</p>
+          <p>{{params.8.address}}</p>
+          <p>{{params.8.website}}</p>
+          <br>
+          <p>{{params.9.name}} {{params.9.rating}}</p>
+          <p>{{params.9.number}}</p>
+          <p>{{params.9.address}}</p>
+          <p>{{params.9.website}}</p>
+          <br>
+        </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

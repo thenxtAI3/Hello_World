@@ -15,3 +15,5 @@ Finder - Search for restaurants or stores simply by typing in your own words wha
 
 Our services are powered by Google Developer APIs
 ![Hello World](https://github.com/thenxtAI3/Hello_World/blob/master/Preview.png)
+
+Credits: Celina Juarez | Irais Gopar
